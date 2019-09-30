@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".view.ProductDetailActivity">
+
+    <ScrollView
+        android:layout_above="@id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/photo"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                app:srcCompat="@android:drawable/ic_menu_report_image" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:onClick="favOnClick"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/favIcon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    app:srcCompat="@drawable/ic_favorite_outline" />
+
+                <TextView
+                    android:id="@+id/titleTextView"
+                    android:layout_toLeftOf="@id/favIcon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="TextView"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/descriptionTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="TextView"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:onClick="backButtonOnClick"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            app:srcCompat="@drawable/ic_arrow_back" />
+
+        <ImageView
+            android:onClick="shareIconOnClick"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            app:srcCompat="@drawable/ic_share_black" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottomLayout"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_alignParentRight="true"
+            android:id="@+id/buyButton"
+            android:onClick="buyButtonOnClick"
+            android:text="@string/buy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@id/buyButton"
+            android:layout_centerVertical="true"
+            android:id="@+id/priceTextView"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:text="$400"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/buyButton" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

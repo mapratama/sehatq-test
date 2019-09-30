@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_margin="15dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:onClick="backButtonOnClick"
+            android:layout_gravity="center_vertical"
+            app:srcCompat="@drawable/ic_arrow_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+
+        <LinearLayout
+            android:onClick="searchOnClick"
+            android:layout_marginLeft="15dp"
+            android:padding="7dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/border_oval"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                app:srcCompat="@drawable/ic_search"
+                android:tint="@android:color/darker_gray"
+                android:layout_width="23dp"
+                android:layout_height="23dp" />
+
+            <EditText
+                android:id="@+id/searchEditText"
+                android:layout_marginLeft="5dp"
+                android:background="@color/white"
+                android:textSize="15sp"
+                android:maxLines="1"
+                android:hint="@string/search_hint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@id/headerLayout"
+        android:id="@+id/productRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <include
+        layout="@layout/layout_empty"
+        android:id="@+id/layoutEmpty"
+        android:visibility="gone"
+        tools:visibility="visible"/>
+
+</RelativeLayout>

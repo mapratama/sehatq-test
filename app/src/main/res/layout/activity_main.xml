@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_margin="15dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            app:srcCompat="@mipmap/ic_launcher_round"
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <LinearLayout
+            android:onClick="searchOnClick"
+            android:layout_marginLeft="15dp"
+            android:padding="7dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/border_oval"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                app:srcCompat="@drawable/ic_search"
+                android:tint="@android:color/darker_gray"
+                android:layout_width="23dp"
+                android:layout_height="23dp" />
+
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:text="@string/search_hint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:elevation="5dp"
+        app:itemBackground="@color/white"
+        app:itemIconTint="@color/tab_selector"
+        app:itemTextColor="@color/tab_selector"
+        app:menu="@menu/bottom_navigation" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_above="@id/bottomNavigationView"
+        android:layout_below="@id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:paddingLeft="10dp"
+                android:id="@+id/categoryRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="20dp"
+                android:id="@+id/productRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/progressBar"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:indeterminate="true"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <include
+        layout="@layout/layout_error"
+        android:id="@+id/layoutError"
+        android:visibility="gone"
+        tools:visibility="visible"/>
+
+    <include
+        layout="@layout/layout_empty"
+        android:id="@+id/layoutEmpty"
+        android:visibility="gone"
+        tools:visibility="visible"/>
+
+</RelativeLayout>

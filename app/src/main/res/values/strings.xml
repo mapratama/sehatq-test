@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">SehatQ Test</string>
+    <string name="facebook_app_id">2567005783518128</string>
+    <string name="fb_login_protocol_scheme">fb991063564564015</string>
+    <string name="request_id_token">"479919203789-s1fe0lllmr6se7g1teu8cfih74ieatc6.apps.googleusercontent.com"</string>
+
+    <string name="error">Tidak dapat menampilkan data</string>
+    <string name="fb_error">Tidak dapat login menggunakan facebook</string>
+    <string name="empty">Data sedang tidak ada</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="logout">Logout</string>
+    <string name="buy">Buy</string>
+    <string name="customer_data">Customer Data</string>
+    <string name="payment_data">Payment Data</string>
+    <string name="name">Name</string>
+    <string name="remember_me">Remember Me</string>
+    <string name="sign_in">Sign In</string>
+    <string name="google_signin_failed">"Google sign in failed"</string>
+    <string name="search_hint">"Cari berdasarkan nama produk"</string>
+    <string name="success_buy">"Sukses membeli produk"</string>
+    <string name="purchase_history">"Purchase History"</string>
+    <string name="home">"Home"</string>
+    <string name="feed">"Feed"</string>
+    <string name="cart">"Cart"</string>
+    <string name="profile">"Profile"</string>
+    <string name="sign_in_fb">"Sign In with Facebook"</string>
+    <string name="sign_in_google">"Sign In with Google"</string>
+</resources>

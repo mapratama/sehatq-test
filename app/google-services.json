@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "479919203789",
+    "firebase_url": "https://sehatq-94d72.firebaseio.com",
+    "project_id": "sehatq-94d72",
+    "storage_bucket": "sehatq-94d72.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:479919203789:android:3f43b13264c10a54635084",
+        "android_client_info": {
+          "package_name": "sehatq.android.products"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "479919203789-kabn8v4mipqho65sgob559ldg57m084c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "sehatq.android.products",
+            "certificate_hash": "ac0f3457b8e94cbcfc93f84409ae25db98c32a4b"
+          }
+        },
+        {
+          "client_id": "479919203789-s1fe0lllmr6se7g1teu8cfih74ieatc6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFSDZ2rAib7MvFaQi5g__8_vhcHNQEbZ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "479919203789-s1fe0lllmr6se7g1teu8cfih74ieatc6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

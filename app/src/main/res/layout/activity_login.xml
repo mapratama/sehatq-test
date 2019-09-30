@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.LoginActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="50dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:paddingTop="20dp"
+            android:paddingBottom="30dp"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_gravity="center"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:text="@string/login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:padding="7dp"
+                android:textSize="15sp"
+                android:hint="@string/username"
+                android:background="@drawable/border_rounded"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:padding="7dp"
+                android:textSize="15sp"
+                android:inputType="textPassword"
+                android:hint="@string/password"
+                android:background="@drawable/border_rounded"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:layout_marginLeft="13dp"
+                    android:text="@string/remember_me"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:background="@drawable/button"
+                    android:textColor="@android:color/white"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/sign_in"
+                    android:layout_width="100dp"
+                    android:layout_height="37dp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:onClick="buttonFacebookLoginOnClick"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:gravity="center"
+                android:background="@color/blue"
+                android:elevation="5dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:tint="@color/white"
+                    app:srcCompat="@drawable/ic_facebook"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp" />
+
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/sign_in_fb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:onClick="buttonGoogleLoginOnClick"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:elevation="5dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    app:srcCompat="@drawable/ic_google"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp" />
+
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/sign_in_google"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
